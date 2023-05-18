@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+html {
+  overflow-x: hidden;
+}
+:root {
+  --black: Orgba(0, 0, 0, 1);
+  --royal-blue: rgba(47, 108, 229, 1);
+  --chicago: rgba(91, 91, 91, 1);
+  --monsoon: rgba(137, 137, 137, 1);
+  --fuscous-gray: rgba(82, 82, 82, 1);
+  --aluminium: rgba(169, 174, 184, 1);
+  --gallery: rgba(236, 237, 239, 1);
+  --bon-jour: rgba(100, 100, 100, 1);
+  --white: rgba(255, 255, 255, 1);
+  --font-size-xxxxs: 12px;
+  --font-size-xxxs: 14px;
+  --font-size-xxs: 15px;
+  --font-size-xs: 16px;
+  --font-size-s: 18px;
+  --font-size-m: 19px;
+  --font-size-1: 22px;
+  --width-full: 100%;
+  --font-family-ibm_plex_sans: "IBM Plex Sans";
+}
+* {
+  box-sizing: border-box !important;
+}
+
+/* .container {
+  width: 50%;
+  height: 100px;
+}
+
+
+.transrgwht {
+  stroke-dasharray: 0, 1000;
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 10, 1000;
+}
+
+
+.scroll-image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+.scroll-image.visible {
+  opacity: 1;
+  transform: none;
+}
+// This slider will be full screen
+// The `background-image` will be set using JavaScript
+.path-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+// We also need this extra element (generated with JavaScript) to fade the images smoothly
+.path-slider__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+// Defining images
+
+.path-slider__item--1 .item__circle {
+  background-image: url("/assets/domi-img1.png");
+} */
+
+// ... More `background-image` definitions for each item
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+.fixed-svg {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  top: 200px;
+  z-index: 9999;
+  left: 47%;
+  transform: translateX(-50%);
+}
+.fixed-svg svg {
+  background: transparent;
+}
+.container {
+  display: flex;
+  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  padding: 0;
+  width: 100%;
+  margin: 0 !important;
+}
+.left,
+.right {
+  width: 50vw;
+}
+.panel {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding: 0 !important;
+}
+
+.red {
+  background-color: #cf3535;
+  background-image: none;
+}
+
+.panel p {
+  font-size: 32px;
+}
+
+.f1 img {
+  width: 250px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.f2 img {
+  width: 250px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.f3 img {
+  width: 250px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.f4 img {
+  width: 180px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.f5 img {
+  width: 180px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+}
+.f6 img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.f7 img {
+  width: 250px;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+}
+.f2-1 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.f2-2 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.f3 {
+  /* overflow: hidden; */
+}
+.f3-1 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.f3-2 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.f3 img {
+  transform: translateY(-50px);
+}
+.f4 {
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.f4-1 {
+  flex:1 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.f4-2 {
+  flex:1 1;
+  position: relative;
+  transform: translateX(30px);
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.f4-3 img {
+  width: 200px;
+
+}
+.f6{
+  background-image: url("/assets/interior.jpg");
+  z-index:999;
+}
+.f4-3 {
+  flex:1 1;
+  height: 100%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.f4 img {
+  /* transform: translateY(-50px);
+  */
+}
+
+.f7{
+  display: flex;
+  justify-content: center;
+
+}
+.f7-1{
+  transform: translateX(50px) translateY(100px);
+
+}
+.f7-2{
+  transform: translateY(80px);
+}
+
+/* .container {
+  position: relative;
+  width: 100%;
+  height: auto;
+} */
+/* .right {
+  position: relative;
+  min-height: 100vh;
+}
+/*
+.panel {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  visibility: hidden;
+} */
