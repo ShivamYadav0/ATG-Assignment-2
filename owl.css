@@ -309,6 +309,15 @@ button {
   background: #fff;
   color: green;
 }
+.owl-theme .owl-dots .owl-dot span{
+  border: 2px solid #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+.owl-dots{
+  width: 300px !important;
+}
+
 @media (max-width: 500px) {
   #mobile .f1-1 {
     transform: translateX(-35px);
