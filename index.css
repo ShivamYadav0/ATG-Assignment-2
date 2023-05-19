@@ -8,6 +8,21 @@
   --gallery: rgba(236, 237, 239, 1);
   --bon-jour: rgba(100, 100, 100, 1);
   --white: rgba(255, 255, 255, 1);
+  --lf1: #5b00a8;
+  --rf1: #ccccce;
+  --lf4: #0e121b;
+  --rf4: #17263b;
+  --lf3: #100f37;
+  --rf3: #151345;
+  --lf2: #4A18c5;
+  --rf2: #19005e;
+  --lf5: #1a64e1;
+  --rf5: #31dfe6;
+  --lf6: #06288d;
+  --lf7: #0b944e;
+  --rf7: #10ce6a;
+  
+
 }
 body {
   background: #ffffff;
@@ -112,7 +127,7 @@ h1 {
   left: 44.3%;
   border-radius: 100%;
   transform: translateX(-50%);
-  background-color: var(--royal-blue);
+  background-color: var(--lf1);
 }
 
 .fixed-svg svg {
@@ -140,11 +155,11 @@ h1 {
   position: relative;
 }
 .right {
-  background-color: blue;
+  background-color: var(--rf1);
 }
 .left {
   position: relative;
-  background-color: var(--royal-blue);
+  background-color:var(--lf1);
   z-index: 999 !important;
 }
 

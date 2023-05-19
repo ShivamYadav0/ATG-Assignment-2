@@ -1,37 +1,58 @@
 gsap.registerPlugin(ScrollTrigger);
 let dir = 0;
+function colorChange(pel,id) {
+  let root = document.querySelector(':root');
+  let cs = getComputedStyle(root);
+  let leftitem = document.querySelector('.'+pel+' .left');
+  let rightitem = document.querySelector('.'+pel+' .right');
+  let fixeditem = document.querySelector('.'+pel+' .svg-box');
+  fixeditem.style.backgroundColor =cs.getPropertyValue('--lf'+id);
+  leftitem.style.backgroundColor =cs.getPropertyValue('--lf'+id);
+  rightitem.style.backgroundColor =cs.getPropertyValue('--rf'+id);
+}
 function show_next_hero_panel(newSection, index) {
   if (newSection !== currentSection) {
     let curdir = -1;
     if (index > dir) curdir = 1;
     dir = index;
-    gsap.to(currentSection, { autoAlpha: 0, duration: 0.5 });
-    gsap.to(newSection, { autoAlpha: 1, duration: 0.5 });
+    gsap.to(currentSection, { autoAlpha: 0, duration: 0.3 });
+    gsap.to(newSection, { autoAlpha: 1, duration: 0.3 });
+    let node =
+      currentSection.childNodes[1].classList[
+        currentSection.childNodes[1].classList.length - 1
+      ];
     currentSection = newSection;
     // console.log(
     //   newSection.childNodes[1].classList[
     //     newSection.childNodes[1].classList.length - 1
     //   ]
     // );
-    let node =
+    
+    function slide (node,curdir){
+      let els = document.querySelectorAll("." + node + " img");
+      let elh1 = document.querySelectorAll("." + node + " h1");
+      let elp = document.querySelectorAll("." + node + " p");
+      
+      //console.log(curdir);
+      elh1.forEach((obj, i) => {
+        animate(obj, curdir);
+      });
+      elp.forEach((obj, i) => {
+        animate(obj, curdir);
+      });
+      els.forEach((obj, i) => {
+        animate(obj, curdir);
+      });
+    }
+    
+      //console.log(node);
+     slide(node,1)
+     node =
       newSection.childNodes[1].classList[
         newSection.childNodes[1].classList.length - 1
       ];
-    let els = document.querySelectorAll("." + node + " img");
-    let elh1 = document.querySelectorAll("." + node + " h1");
-    let elp = document.querySelectorAll("." + node + " p");
-
-    //console.log(curdir);
-    elh1.forEach((obj, i) => {
-      animate(obj, curdir);
-    });
-    elp.forEach((obj, i) => {
-      animate(obj, curdir);
-    });
-    els.forEach((obj, i) => {
-      animate(obj, curdir);
-    });
-
+      colorChange(node,index+1)
+      slide(node,curdir)
     //
     const dots = document.querySelectorAll(".dots-nav");
     const dotIndex = Array.from(panels).indexOf(newSection);
@@ -45,7 +66,7 @@ function show_next_hero_panel(newSection, index) {
     const pathLength = path.getTotalLength();
     const distance = (pathLength / dots.length) * (1 + dotIndex);
     console.log(dotIndex);
-
+    
     let dvd = 9000;
     if(dotIndex==1){
       dvd = 6;
