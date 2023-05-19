@@ -343,7 +343,7 @@ h1 {
 }
 .main-wrapper .left-end {
   position: absolute;
-  height: 200px;
+  height: 250px;
   width: 300px;
   left: 50px;
   bottom: 70px;
@@ -361,9 +361,11 @@ h1 {
   z-index: 99;
 }
 .main-wrapper .left-end p {
-  transform: translateY(-10px);
+  transform: translateY(0px);
+  margin-bottom: 10px;
   font-size: 20px;
 }
+
 
 .main-wrapper .box {
   display: flex;

@@ -229,8 +229,8 @@ h1 {
   height: 200px;
   width: 300px;
   left: 50px;
-  top: 40px;
-  overflow: hidden;
+  top: 30px;
+
   color: #fff;
   z-index: 99;
   font-size: 27px;
@@ -289,7 +289,26 @@ h1 {
 #mobile .f7 .right {
   background-color: var(--rf7);
 }
-
+#mobile .left img {
+  transform: translateY(-60px) !important;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid var(--lf7);
+}
+button {
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: white;
+}
+.f2 button {
+  background: #fd64c6;
+}
+.f7 button {
+  background: #fff;
+  color: green;
+}
 @media (max-width: 500px) {
   #mobile .f1-1 {
     transform: translateX(-35px);

@@ -20,9 +20,9 @@ function colorChange(pel, id) {
 
 // Function to animate elements
 function animate(elem, direction) {
-  var x = 0
-  if(elem.classList.contains("img-slide-2")){
-   direction = -direction;
+  var x = 0;
+  if (elem.classList.contains("img-slide-2")) {
+    direction = -direction;
   }
   var y = direction * 100;
   x = 0;
@@ -63,7 +63,7 @@ function slide(node, curdir) {
 
 // Function to show the next hero panel
 function show_next_hero_panel(newSection, index) {
- // console.log(((index - 0.5) * innerHeight) / 1.4);
+  // console.log(((index - 0.5) * innerHeight) / 1.4);
   if (newSection !== currentSection) {
     let curdir = -1;
     if (index > dir) curdir = 1;
@@ -182,11 +182,11 @@ panels.forEach((panel, i) => {
 //   //     start: "center center",
 //   //     end: "+=500",
 //   //     scrub: 1,
-     
+
 //   //     onSnapComplete: () => console.log(tl.currentLabel())
 //   //   }
 //   // });
-  
+
 //   // // add animations and labels to the timeline
 //   // tl2.addLabel("start")
 //   //   .staggerTo(".box2 .f3-1 , .box2 .f3-2", 1, {transform: function(i) {
@@ -194,8 +194,6 @@ panels.forEach((panel, i) => {
 //   //     return 'translateY(' +ch +'50%)'
 //   // }, ease:Power3.easeInOut}, 0.15, "frame1+=0.6")
 //   //   .addLabel("end");
-  
-
 
 //   //  snap: {
 //   //   snapTo: "labels", // snap to the closest label in the timeline
