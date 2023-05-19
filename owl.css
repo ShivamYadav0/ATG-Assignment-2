@@ -13,6 +13,7 @@
   --lf7: #0b944e;
   --rf7: #10ce6a;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -91,7 +92,7 @@ h1 {
   padding: 0;
 }
 #mobile .f4 img {
-  width: 220px;
+  width: 200px;
   height: 400px;
   margin: 0;
   padding: 0;
@@ -223,7 +224,6 @@ h1 {
   transform: translateY(80px);
 }
 
-
 #mobile .left-end {
   position: absolute;
   height: 200px;
@@ -247,31 +247,72 @@ h1 {
   transform: translateY(-10px);
   font-size: 20px;
 }
-
+#mobile .f1 .left {
+  background-color: var(--lf1);
+}
+#mobile .f1 .right {
+  background-color: var(--rf1);
+}
+#mobile .f2 .left {
+  background-color: var(--lf2);
+}
+#mobile .f2 .right {
+  background-color: var(--rf2);
+}
+#mobile .f3 .left {
+  background-color: var(--lf3);
+}
+#mobile .f3 .right {
+  background-color: var(--rf3);
+}
+#mobile .f4 .left {
+  background-color: var(--lf4);
+}
+#mobile .f4 .right {
+  background-color: var(--rf4);
+}
+#mobile .f5 .left {
+  background-color: var(--lf5);
+}
+#mobile .f5 .right {
+  background-color: var(--rf5);
+}
+#mobile .f6 .left {
+  background-color: var(--lf6);
+}
+#mobile .f6 .right {
+  background-color: var(--rf6);
+}
+#mobile .f7 .left {
+  background-color: var(--lf7);
+}
+#mobile .f7 .right {
+  background-color: var(--rf7);
+}
 
 @media (max-width: 500px) {
- #mobile .f1-1{
-  transform: translateX(-35px);
- }
- #mobile .f1-2{
-  transform: translateX(-65px);
- }
- #mobile .f2-1{
-  transform: translateX(-35px);
- }
- #mobile .f2-2{
-  transform: translateX(-40px);
- }
- #mobile .f3-1{
-  transform: translateX(-60px) translateY(50px);
- }
- #mobile .f3-2{
-  transform: translateX(-70px) translateY(-10px);
- }
- #mobile .f7-1{
-  transform: translateX(10px) translateY(30px);
- }
- #mobile .f7-2{
-  transform: translateX(-37px) translateY(30px);
- }
+  #mobile .f1-1 {
+    transform: translateX(-35px);
+  }
+  #mobile .f1-2 {
+    transform: translateX(-65px);
+  }
+  #mobile .f2-1 {
+    transform: translateX(-35px);
+  }
+  #mobile .f2-2 {
+    transform: translateX(-40px);
+  }
+  #mobile .f3-1 {
+    transform: translateX(-60px) translateY(50px);
+  }
+  #mobile .f3-2 {
+    transform: translateX(-70px) translateY(-10px);
+  }
+  #mobile .f7-1 {
+    transform: translateX(10px) translateY(90px);
+  }
+  #mobile .f7-2 {
+    transform: translateX(-55px) translateY(50px);
+  }
 }
