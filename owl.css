@@ -72,32 +72,32 @@ h1 {
   align-items: center;
 }
 #mobile .f1 img {
-  width: 300px;
+  width: 230px;
   height: 450px;
   margin: 0;
   padding: 0;
 }
 
 #mobile .f2 img {
-  width: 250px;
+  width: 230px;
   height: 400px;
   margin: 0;
   padding: 0;
 }
 #mobile .f3 img {
-  width: 250px;
+  width: 230px;
   height: 400px;
   margin: 0;
   padding: 0;
 }
 #mobile .f4 img {
-  width: 240px;
+  width: 220px;
   height: 400px;
   margin: 0;
   padding: 0;
 }
 #mobile .f5 img {
-  width: 180px;
+  width: 150px;
   height: 300px;
   margin: 0;
   padding: 0;
@@ -109,14 +109,14 @@ h1 {
   padding: 0;
 }
 #mobile .f7 img {
-  width: 300px;
+  width: 260px;
   height: 450px;
   margin: 0;
   padding: 0;
 }
 
 #mobile .f2-1 {
-  margin-left: 50px;
+  margin-left: 20px;
   padding: 0;
   height: 100%;
   display: flex;
@@ -143,7 +143,7 @@ h1 {
   margin-left: 50px;
 }
 #mobile .f3-1 img {
-  width: 300px;
+  width: 250px;
   height: 450px;
 }
 #mobile .f3-2 {
@@ -154,7 +154,7 @@ h1 {
   align-items: flex-start;
 }
 #mobile .f3 img {
-  transform: translateY(-50px);
+  transform: translateY(0px);
 }
 #mobile .f4 {
   position: relative;
@@ -172,14 +172,14 @@ h1 {
 #mobile .f4-2 {
   flex: 1 1;
   position: relative;
-  transform: translateX(50px);
-  padding: 10px;
+  transform: translateX(0px);
+  padding: 0px;
   height: 100%;
   display: flex;
   align-items: center;
 }
 #mobile .f4-3 img {
-  width: 200px;
+  width: 60px;
 }
 #mobile .f6 {
   z-index: 999;
@@ -200,10 +200,10 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 #mobile .f5-2 {
-  padding-left: 30px;
+  padding-left: 0px;
 }
 #mobile .f5-3 {
   display: flex;
@@ -217,32 +217,19 @@ h1 {
   justify-content: center;
 }
 #mobile .f7-1 {
-  transform: translateX(60px) translateY(100px);
+  transform: translateX(40px) translateY(100px);
 }
 #mobile .f7-2 {
   transform: translateY(80px);
 }
 
-#mobile .left-side {
-  position: absolute;
-  right: 20px;
-  top: 200px;
-  overflow: hidden;
-  color: #fff;
-  z-index: 2;
-  font-size: 28px;
-}
-#mobile .left-side p {
-  text-align: end;
-  z-index: 9;
-  font-size: 20px;
-}
+
 #mobile .left-end {
   position: absolute;
   height: 200px;
   width: 300px;
   left: 50px;
-  bottom: 70px;
+  top: 40px;
   overflow: hidden;
   color: #fff;
   z-index: 99;
@@ -261,13 +248,4 @@ h1 {
   font-size: 20px;
 }
 
-#mobile .box {
-  display: flex;
-  height: 100vh;
-  width: 50vw;
-}
-#mobile .box2 {
-  display: flex;
-  height: 100vh;
-  width: 50vw;
-}
+
