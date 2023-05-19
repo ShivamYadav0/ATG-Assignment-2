@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="author" content="Shivam Yadav" />
+    <meta name="context" content="Assignment 2" />
+    <title>Assignment-2</title>
     <script
       type="text/javascript"
       src="https://unpkg.co/gsap@3/dist/gsap.min.js"
@@ -14,13 +16,22 @@
       src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"
     ></script>
     <script
-      type="text/javascript"
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"
-    ></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="owlcarousel/dist/assets/owl.carousel.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="owlcarousel/dist/assets/owl.theme.default.min.css"
+  />
+  <link rel="stylesheet" href="/owl.css" />
+  <script src="owlcarousel/dist/owl.carousel.min.js"></script>
+
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
@@ -228,7 +239,7 @@
         <div class="main-wrapper__panel">
           <section class="panel f1">
             <div class="svg-box"></div>
-            <!-- <h1>Pair with CSS Scroll Snapping</h1> -->
+
             <div class="left">
               <div class="left-side">
                 <h1>25M+ Downloads</h1>
@@ -237,7 +248,7 @@
               <div class="left-end">
                 <img
                   class="img-slide"
-                  style="width: 200px; height: 70px"
+                  style="width: 300px; height: 70px"
                   src="./assets/world-communication-awards-for-best-digital-experience.png"
                 />
 
@@ -249,13 +260,13 @@
             <div class="right">
               <div class="f1-1">
                 <img
-                  class="img-slide"
+                  class="img-slide-2"
                   src="./assets/nexgtv-entertainment-mobile-app-development.png"
                 />
               </div>
               <div class="f1-2">
                 <img
-                  class="img-slide"
+                  class="img-slide-2"
                   src="./assets/nexgtv-mobile-app-ui-design.png"
                 />
               </div>
@@ -264,7 +275,7 @@
         </div>
 
         <div class="main-wrapper__panel">
-          <section class="panel orange f2">
+          <section class="panel f2">
             <div class="svg-box"></div>
             <div class="left">
               <div class="left-side">
@@ -279,21 +290,28 @@
               <div class="left-right">SKIP</div>
             </div>
             <div class="right">
-              <div class="f2-1">
-                <img
-                  class="img-slide"
-                  src="./assets/veme-blockchain-app-developed.png"
-                />
-              </div>
-              <div class="f2-2">
-                <img class="img-slide" src="./assets/veme-app-ui-design.png" />
+              <div class="container">
+                <div class="box">
+                  <div class="f2-1">
+                    <img
+                      class="img-slide-2"
+                      src="./assets/veme-blockchain-app-developed.png"
+                    />
+                  </div>
+                  <div class="f2-2">
+                    <img
+                      class="img-slide"
+                      src="./assets/veme-app-ui-design.png"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
         </div>
 
         <div class="main-wrapper__panel">
-          <section class="panel orange f3">
+          <section class="panel f3">
             <div class="svg-box"></div>
             <div class="left">
               <div class="left-side">
@@ -308,9 +326,11 @@
               <div class="left-right">SKIP</div>
             </div>
             <div class="right">
+              <div class="container">
+                <div class="box">
               <div class="f3-1">
                 <img
-                  class="img-slide-"
+                  class="img-slide-2"
                   src="./assets/nasa-fitness-tracking-mobile-app.png"
                 />
               </div>
@@ -320,12 +340,14 @@
                   src="./assets/measure-total-body-weight-through-fitness-app.png"
                 />
               </div>
+              </div>
+              </div>
             </div>
           </section>
         </div>
 
         <div class="main-wrapper__panel">
-          <section class="panel red f4">
+          <section class="panel f4">
             <div class="svg-box"></div>
             <div class="left">
               <div class="left-side">
@@ -342,7 +364,7 @@
             <div class="right">
               <div class="f4-1">
                 <img
-                  class="img-slide"
+                  class="img-slide-2"
                   style="position: absolute; top: 0; left: 0; height: 200px"
                   src="./assets/pizza_box.png"
                 />
@@ -354,13 +376,13 @@
               </div>
               <div class="f4-2">
                 <img
-                  class="img-slide"
+                  class="img-slide-2"
                   src="./assets/ux-strategy-for-mobile-app-devlopment.png"
                 />
               </div>
               <div class="f4-3">
                 <img
-                  class="img-slide"
+                  class="img-slide-2"
                   style="
                     position: absolute;
                     top: -10px;
@@ -386,7 +408,7 @@
         </div>
 
         <div class="main-wrapper__panel">
-          <section class="panel blue yoyo f5">
+          <section class="panel f5">
             <div class="svg-box"></div>
             <div class="left">
               <div class="left-side">
@@ -403,7 +425,7 @@
             <div class="right">
               <div class="f5-1">
                 <img
-                  class="img-slide"
+                  class="img-slide-2"
                   src="./assets/karavan-social-networking-app-screen.png"
                 />
                 <img class="img-slide" src="./assets/karavan_2.png" />
@@ -411,7 +433,7 @@
 
               <div class="f5-2">
                 <img
-                  class="img-slide"
+                  class="img-slide-2"
                   src="./assets/social-networking-app-case-study.png"
                 />
                 <img
@@ -466,7 +488,7 @@
           </section>
         </div>
         <div class="main-wrapper__panel">
-          <section class="panel blue yoyo f7">
+          <section class="panel f7">
             <div class="svg-box"></div>
             <div class="left">
               <div class="left-side">
@@ -477,7 +499,7 @@
               <div class="left-end">
                 <img
                   class="img-slide"
-                  style="width: 200px; height: 70px"
+                  style="width: 300px; height: 70px"
                   src="./assets/world-communication-awards-for-best-digital-experience.png"
                 />
                 <h1>ABC 23478</h1>
@@ -497,6 +519,239 @@
         </div>
       </div>
     </div>
+    <div id="mobile" >
+      <div class="owl-carousel owl-theme">
+        <div class="owl-panel-wrapper">
+          <section class="panel f1">
+            <div class="left">
+              <div class="left-end">
+                <img
+                  class="img-slide"
+                  style="width: 300px; height: 70px"
+                  src="./assets/world-communication-awards-for-best-digital-experience.png"
+                />
+  
+                <h1>ABC 123</h1>
+                <p>we are the best web development company in the world</p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="f1-1">
+                <img
+                  class="img-slide-2"
+                  src="./assets/nexgtv-entertainment-mobile-app-development.png"
+                />
+              </div>
+              <div class="f1-2">
+                <img
+                  class="img-slide-2"
+                  src="./assets/nexgtv-mobile-app-ui-design.png"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+  
+        <div class="owl-panel-wrapper">
+          <section class="panel f2">
+            <div class="left">
+              <div class="left-end">
+                <h1>ABC 234</h1>
+                <p>we are the best web development company in the world</p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="f2-1">
+                <img
+                  class="img-slide-2"
+                  src="./assets/veme-blockchain-app-developed.png"
+                />
+              </div>
+              <div class="f2-2">
+                <img class="img-slide" src="./assets/veme-app-ui-design.png" />
+              </div>
+            </div>
+          </section>
+        </div>
+  
+        <div class="owl-panel-wrapper">
+          <section class="panel f3">
+            <div class="left">
+              <div class="left-end">
+                <h1>ABC 345</h1>
+                <p>we are the best web development company in the world</p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="f3-1">
+                <img
+                  class="img-slide-2"
+                  src="./assets/nasa-fitness-tracking-mobile-app.png"
+                />
+              </div>
+              <div class="f3-2">
+                <img
+                  class="img-slide"
+                  src="./assets/measure-total-body-weight-through-fitness-app.png"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+  
+        <div class="owl-panel-wrapper">
+          <section class="panel f4">
+            <div class="left">
+              <div class="left-end">
+                <h1>ABC 456</h1>
+                <p>we are the best web development company in the world</p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="f4-1">
+                <img
+                  class="img-slide-2"
+                 
+                  src="./assets/pizza_box.png"
+                />
+                <img
+                  class="img-slide"
+                
+                  src="./assets/domi-img1.png"
+                />
+              </div>
+              <div class="f4-2">
+                <img
+                  class="img-slide-2"
+                  src="./assets/ux-strategy-for-mobile-app-devlopment.png"
+                />
+              </div>
+              <div class="f4-3">
+                <img
+                  class="img-slide-2"
+                 
+                  src="./assets/dominos-bread.png"
+                />
+                <img
+                  class="img-slide"
+                
+                  src="./assets/dominos-bread1.png"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+  
+        <div class="owl-panel-wrapper">
+          <section class="panel f5">
+            <div class="left">
+              <div class="left-end">
+                <h1>ABC 567</h1>
+                <p>we are the best web development company in the world</p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="f5-1">
+                <img
+                  class="img-slide-2"
+                  src="./assets/karavan-social-networking-app-screen.png"
+                />
+                <img class="img-slide" src="./assets/karavan_2.png" />
+              </div>
+  
+              <div class="f5-2">
+                <img
+                  class="img-slide-2"
+                  src="./assets/social-networking-app-case-study.png"
+                />
+                <img
+                  class="img-slide"
+                  src="./assets/karavan-social-networking-app-screen-2.png"
+                />
+              </div>
+  
+              <div class="f5-3">
+                <img
+                  class="img-slide"
+                  src="./assets/developers-for-social-media-app.png"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+  
+        <div class="owl-panel-wrapper">
+          <section class="panel blue yoyo f6">
+            <div class="left">
+              <div class="left-end">
+                <h1>ABC 678</h1>
+                <p>
+                  Best since 2017 We offer wide range of web development and app
+                  development
+                </p>
+              </div>
+            </div>
+            <div class="right">
+              <div
+                class="f6-1"
+                style="
+                  background: url('./assets/interior.jpg') no-repeat;
+                  width: 100vw;
+                  background-size: 50vw 100vh;
+                "
+              >
+                <img
+                  class="img-slide"
+                  src="./assets/erp-app-development-service.png"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="owl-panel-wrapper">
+          <section class="panel f7">
+            <div class="left">
+              <div class="left-end">
+                <img
+                  class="img-slide"
+                  style="width: 300px; height: 70px"
+                  src="./assets/world-communication-awards-for-best-digital-experience.png"
+                />
+                <h1>ABC 23478</h1>
+                <p>we are the best web development company in the world</p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="f7-1">
+                <img class="img-slide" src="./assets/melltoo-img2.png" />
+              </div>
+              <div class="f7-2">
+                <img class="img-slide" src="./assets/melltoo-img1.png" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      
+    </div>
     <script src="/index.js"></script>
+    <script type="text/javascript">
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
