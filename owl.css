@@ -251,10 +251,10 @@ h1 {
 
 @media (max-width: 500px) {
  #mobile .f1-1{
-  transform: translateX(-45px);
+  transform: translateX(-35px);
  }
  #mobile .f1-2{
-  transform: translateX(-77px);
+  transform: translateX(-65px);
  }
  #mobile .f2-1{
   transform: translateX(-35px);
@@ -269,9 +269,9 @@ h1 {
   transform: translateX(-70px) translateY(-10px);
  }
  #mobile .f7-1{
-  transform: translateX(5px) translateY(30px);
+  transform: translateX(10px) translateY(30px);
  }
  #mobile .f7-2{
-  transform: translateX(-45px) translateY(30px);
+  transform: translateX(-37px) translateY(30px);
  }
 }
