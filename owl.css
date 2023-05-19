@@ -344,3 +344,18 @@ button {
     transform: translateX(-55px) translateY(50px);
   }
 }
+
+@media (max-width: 939px) and (min-width:500px){
+
+  #mobile .left{
+    justify-content: center;
+
+  }
+#mobile .right{
+    justify-content: center;
+    
+  }
+  #mobile .f4 .right {
+    padding-left: 50px;
+  }
+}
