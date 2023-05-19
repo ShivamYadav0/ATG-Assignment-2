@@ -79,13 +79,13 @@ h1 {
 }
 
 #mobile .f2 img {
-  width: 230px;
+  width: 220px;
   height: 400px;
   margin: 0;
   padding: 0;
 }
 #mobile .f3 img {
-  width: 230px;
+  width: 220px;
   height: 400px;
   margin: 0;
   padding: 0;
@@ -109,7 +109,7 @@ h1 {
   padding: 0;
 }
 #mobile .f7 img {
-  width: 260px;
+  width: 220px;
   height: 450px;
   margin: 0;
   padding: 0;
@@ -249,3 +249,29 @@ h1 {
 }
 
 
+@media (max-width: 500px) {
+ #mobile .f1-1{
+  transform: translateX(-45px);
+ }
+ #mobile .f1-2{
+  transform: translateX(-77px);
+ }
+ #mobile .f2-1{
+  transform: translateX(-35px);
+ }
+ #mobile .f2-2{
+  transform: translateX(-40px);
+ }
+ #mobile .f3-1{
+  transform: translateX(-60px) translateY(50px);
+ }
+ #mobile .f3-2{
+  transform: translateX(-70px) translateY(-10px);
+ }
+ #mobile .f7-1{
+  transform: translateX(5px) translateY(30px);
+ }
+ #mobile .f7-2{
+  transform: translateX(-45px) translateY(30px);
+ }
+}
