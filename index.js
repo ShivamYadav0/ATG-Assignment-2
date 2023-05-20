@@ -1,7 +1,4 @@
-window.addEventListener("load", () => {
-  ScrollSmoother.get().scrollTop(window.pageYOffset);
-  window.history.scrollRestoration = "auto";
-});
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +36,7 @@ function animate(elem, direction, ind) {
     elem,
     { x: x, y: y, autoAlpha: 0 },
     {
-      duration: 1.25,
+      duration: 1,
       x: 0,
       y: 0,
       autoAlpha: 1,
@@ -61,13 +58,13 @@ function slide(node, curdir, ind) {
   elp.forEach((obj, i) => {
     animate(obj, curdir, ind);
   });
-  if(ind==6){
+  if (ind == 6) {
     els.forEach((obj, i) => {
       animate(obj, curdir, ind);
     });
     //animate(els, curdir, ind);
   }
-  
+
   // els.forEach((obj, i) => {
   //   animate(obj, curdir, ind);
   // });
@@ -84,7 +81,7 @@ function show_next_hero_panel(newSection, index) {
       duration: 0.3,
       ease: "power1.inOut",
     });
-    gsap.to(newSection, { autoAlpha: 1, duration: 0.4, ease: "power1.inOut" });
+    gsap.to(newSection, { autoAlpha: 1, duration: 0.3, ease: "power1.inOut" });
 
     currentSection = newSection;
     node =
@@ -140,14 +137,15 @@ ScrollTrigger.create({
   start: () => "top top",
   end: () => "+=" + ((panels.length - 1) * innerHeight) / 1.4,
   pin: true,
+  scrub: 0.5,
 });
 for (let i = 1; i <= panels.length; i++) {
   let delayed = i;
   if (i == 1) delayed = i;
-  if ( i != 7) {
+  if (i != 7) {
     gsap.to(`.f${i} .img-slide-2`, {
       y: 100,
-      duration: 0.8,
+
       scrollTrigger: {
         trigger: () => `.f${i}`,
         start: () => "top top-=" + ((delayed - 1 - 0.5) * innerHeight) / 1.34,
@@ -156,17 +154,17 @@ for (let i = 1; i <= panels.length; i++) {
       },
     });
   }
-  if(i!=7&&i!=6)
-  gsap.to(`.f${i} .img-slide`, {
-    y: -100,
-    duration: 0.8,
-    scrollTrigger: {
-      trigger: () => `.f${i}`,
-      start: () => "top top-=" + ((i - 1 - 0.5) * innerHeight) / 1.34,
-      end: () => "+=100%",
-      scrub: 0.5,
-    },
-  });
+  if (i != 7 && i != 6)
+    gsap.to(`.f${i} .img-slide`, {
+      y: -100,
+
+      scrollTrigger: {
+        trigger: () => `.f${i}`,
+        start: () => "top top-=" + ((i - 1 - 0.5) * innerHeight) / 1.34,
+        end: () => "+=100%",
+        scrub: 0.5,
+      },
+    });
 }
 
 panels.forEach((panel, i) => {
@@ -174,7 +172,7 @@ panels.forEach((panel, i) => {
     trigger: ".main-wrapper",
     start: () => "top top-=" + ((i - 0.5) * innerHeight) / 1.4,
     end: () => "+=" + innerHeight / 1.4,
-    scrub: 1,
+    scrub: 0.5,
     //onUpdate: (self) => console.log(self),
     onToggle: (self) => self.isActive && show_next_hero_panel(panel, i),
   });
