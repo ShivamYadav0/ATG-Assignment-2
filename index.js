@@ -1,3 +1,8 @@
+window.addEventListener("load", () => {
+  ScrollSmoother.get().scrollTop(window.pageYOffset);
+  window.history.scrollRestoration = "auto";
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 let dir = 0;
@@ -19,7 +24,7 @@ function colorChange(pel, id) {
 }
 
 // Function to animate elements
-function animate(elem, direction) {
+function animate(elem, direction, ind) {
   var x = 0;
   if (elem.classList.contains("img-slide-2")) {
     direction = -direction;
@@ -45,31 +50,41 @@ function animate(elem, direction) {
 }
 
 // Function to animate elements in a section
-function slide(node, curdir) {
+function slide(node, curdir, ind) {
   let els = document.querySelectorAll("." + node + " img");
   let elh1 = document.querySelectorAll("." + node + " h1");
   let elp = document.querySelectorAll("." + node + " p");
 
   elh1.forEach((obj, i) => {
-    animate(obj, curdir);
+    animate(obj, curdir, ind);
   });
   elp.forEach((obj, i) => {
-    animate(obj, curdir);
+    animate(obj, curdir, ind);
   });
-  els.forEach((obj, i) => {
-    animate(obj, curdir);
-  });
+  if(ind==6){
+    els.forEach((obj, i) => {
+      animate(obj, curdir, ind);
+    });
+    //animate(els, curdir, ind);
+  }
+  
+  // els.forEach((obj, i) => {
+  //   animate(obj, curdir, ind);
+  // });
 }
 
 // Function to show the next hero panel
 function show_next_hero_panel(newSection, index) {
-  // console.log(((index - 0.5) * innerHeight) / 1.4);
   if (newSection !== currentSection) {
     let curdir = -1;
     if (index > dir) curdir = 1;
     dir = index;
-    gsap.to(currentSection, { autoAlpha: 0, duration: 0.3 });
-    gsap.to(newSection, { autoAlpha: 1, duration: 0.4 });
+    gsap.to(currentSection, {
+      autoAlpha: 0,
+      duration: 0.3,
+      ease: "power1.inOut",
+    });
+    gsap.to(newSection, { autoAlpha: 1, duration: 0.4, ease: "power1.inOut" });
 
     currentSection = newSection;
     node =
@@ -77,7 +92,7 @@ function show_next_hero_panel(newSection, index) {
         newSection.childNodes[1].classList.length - 1
       ];
     colorChange(node, index + 1);
-    slide(node, curdir);
+    slide(node, curdir, index);
     //const client = node.getBoundingClientRect();
 
     const dotIndex = Array.from(panels).indexOf(newSection);
@@ -126,79 +141,43 @@ ScrollTrigger.create({
   end: () => "+=" + ((panels.length - 1) * innerHeight) / 1.4,
   pin: true,
 });
+for (let i = 1; i <= panels.length; i++) {
+  let delayed = i;
+  if (i == 1) delayed = i;
+  if (i != 6 && i != 7) {
+    gsap.to(`.f${i} .img-slide-2`, {
+      y: 100,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: () => `.f${i}`,
+        start: () => "top top-=" + ((delayed - 1 - 0.5) * innerHeight) / 1.34,
+        end: () => "+=100%",
+        scrub: 0.5,
+      },
+    });
+  }
+  if(i!=7)
+  gsap.to(`.f${i} .img-slide`, {
+    y: -100,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: () => `.f${i}`,
+      start: () => "top top-=" + ((i - 1 - 0.5) * innerHeight) / 1.34,
+      end: () => "+=100%",
+      scrub: 0.5,
+    },
+  });
+}
 
 panels.forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: ".main-wrapper",
     start: () => "top top-=" + ((i - 0.5) * innerHeight) / 1.4,
     end: () => "+=" + innerHeight / 1.4,
-
+    scrub: 1,
+    //onUpdate: (self) => console.log(self),
     onToggle: (self) => self.isActive && show_next_hero_panel(panel, i),
   });
 });
 
-// // Add a scroll event listener to the window
-// window.addEventListener("scroll", handleScroll);
-
-// // Define the scroll event handler function
-// function handleScroll() {
-//   // Get the current scroll position of the window
-//   const scrollPosition = window.scrollY;
-
-//   // Perform your desired actions based on the scroll position
-//   // For example, if the scroll position is greater than 500 pixels, trigger an event
-//   if (scrollPosition > 1000) {
-//     if (scrollPosition >= 1113) console.log("obs", scrollPosition);
-//     // Trigger your event or perform actions here
-//     // console.log('Scroll position is greater than 500 pixels');
-//   }
-// }
-// let tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".container",
-//     pin: true,
-//     start: "center center",
-//     end: "+=900",
-//     scrub: 1,
-//   }
-// });
-
-// // add animations and labels to the timeline
-// tl.addLabel("start")
-//   .staggerTo(".box .f2-1 , .box .f2-2", 3,{delay: 1,transform: function(i) {
-//     let ch=(i==1?'-':'')
-//     return 'translateY(' +ch +'30%)'
-// }, ease:Power3.easeInOut}, 0.1)
-//   .addLabel("end")
-//   .staggerTo(".box .f3-1 , .box .f3-2", 3, {delay: 9,transform: function(i) {
-//     let ch=(i==1?'-':'')
-//     return 'translateY(' +ch +'30%)'
-// }, ease:Power3.easeInOut}, 0.1)
-
-//   // let tl2 = gsap.timeline({
-//   //   scrollTrigger: {
-//   //     trigger: ".container2",
-//   //     pin: true,
-//   //     start: "center center",
-//   //     end: "+=500",
-//   //     scrub: 1,
-
-//   //     onSnapComplete: () => console.log(tl.currentLabel())
-//   //   }
-//   // });
-
-//   // // add animations and labels to the timeline
-//   // tl2.addLabel("start")
-//   //   .staggerTo(".box2 .f3-1 , .box2 .f3-2", 1, {transform: function(i) {
-//   //     let ch=(i==1?'-':'')
-//   //     return 'translateY(' +ch +'50%)'
-//   // }, ease:Power3.easeInOut}, 0.15, "frame1+=0.6")
-//   //   .addLabel("end");
-
-//   //  snap: {
-//   //   snapTo: "labels", // snap to the closest label in the timeline
-//   //   duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-//   //   delay: 0.1, // wait 0.1 seconds from the last scroll event before doing the snapping
-//   //   ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
-//   // },
-//   // markers: true,
+console.clear();

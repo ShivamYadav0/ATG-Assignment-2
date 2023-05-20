@@ -114,7 +114,7 @@ h1 {
   position: fixed;
   top: 100px;
   z-index: 99;
-  left: 42.3%;
+  left: 41.4%;
   border-radius: 100%;
   transform: translateX(-50%);
   background-color: var(--lf1);
@@ -126,7 +126,7 @@ h1 {
   position: fixed;
   top: 100px;
   z-index: 8;
-  left: 43%;
+  left: 41.1%;
   transform: translateX(-50%);
 }
 #transring {
@@ -343,7 +343,8 @@ h1 {
 }
 .main-wrapper .left-end {
   position: absolute;
-  height: 250px;
+  height: 260px;
+  padding-top: 10px;
   width: 300px;
   left: 50px;
   bottom: 70px;
@@ -365,7 +366,6 @@ h1 {
   margin-bottom: 10px;
   font-size: 20px;
 }
-
 
 .main-wrapper .box {
   display: flex;

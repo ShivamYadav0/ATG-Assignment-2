@@ -309,12 +309,12 @@ button {
   background: #fff;
   color: green;
 }
-.owl-theme .owl-dots .owl-dot span{
+.owl-theme .owl-dots .owl-dot span {
   border: 2px solid #fff;
   border-color: #fff;
   background-color: transparent;
 }
-.owl-dots{
+.owl-dots {
   width: 300px !important;
 }
 
@@ -345,15 +345,12 @@ button {
   }
 }
 
-@media (max-width: 939px) and (min-width:500px){
-
-  #mobile .left{
+@media (max-width: 939px) and (min-width: 500px) {
+  #mobile .left {
     justify-content: center;
-
   }
-#mobile .right{
+  #mobile .right {
     justify-content: center;
-    
   }
   #mobile .f4 .right {
     padding-left: 50px;
