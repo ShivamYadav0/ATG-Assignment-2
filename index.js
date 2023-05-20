@@ -144,7 +144,7 @@ ScrollTrigger.create({
 for (let i = 1; i <= panels.length; i++) {
   let delayed = i;
   if (i == 1) delayed = i;
-  if (i != 6 && i != 7) {
+  if ( i != 7) {
     gsap.to(`.f${i} .img-slide-2`, {
       y: 100,
       duration: 0.8,
@@ -156,7 +156,7 @@ for (let i = 1; i <= panels.length; i++) {
       },
     });
   }
-  if(i!=7)
+  if(i!=7&&i!=6)
   gsap.to(`.f${i} .img-slide`, {
     y: -100,
     duration: 0.8,
